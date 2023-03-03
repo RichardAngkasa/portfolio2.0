@@ -60,7 +60,7 @@ export default function Home() {
                             <FaArrowAltCircleUp
                               className={`${
                                 work1Upper ? "" : "rotate-180"
-                              } fill-black text-2xl duration-1000 absolute `}
+                              } cursor-pointer fill-black text-2xl duration-1000 absolute `}
                             />
                           </div>
                         </div>
@@ -101,7 +101,7 @@ export default function Home() {
                             <FaArrowAltCircleUp
                               className={`${
                                 work2Upper ? "" : "rotate-180"
-                              } fill-black text-2xl duration-1000 absolute `}
+                              } cursor-pointer fill-black text-2xl duration-1000 absolute `}
                             />
                           </div>
                         </div>
@@ -142,7 +142,7 @@ export default function Home() {
                             <FaArrowAltCircleUp
                               className={`${
                                 aboutMeUpper ? "" : "rotate-180"
-                              } fill-black text-2xl duration-1000 absolute `}
+                              } cursor-pointer fill-black text-2xl duration-1000 absolute `}
                             />
                           </div>
                         </div>
@@ -303,7 +303,7 @@ export default function Home() {
                             <FaArrowAltCircleDown
                               className={`${
                                 work1 ? "" : "-rotate-180"
-                              } fill-black text-2xl duration-1000 absolute `}
+                              } cursor-pointer fill-black text-2xl duration-1000 absolute `}
                             />
                           </div>
                         </div>
@@ -335,7 +335,7 @@ export default function Home() {
                             <FaArrowAltCircleDown
                               className={`${
                                 work2 ? "" : "-rotate-180"
-                              } fill-black text-2xl duration-1000 absolute `}
+                              } cursor-pointer fill-black text-2xl duration-1000 absolute `}
                             />
                           </div>
                         </div>
