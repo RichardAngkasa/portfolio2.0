@@ -423,7 +423,7 @@ export default function Home() {
                     dialogFlag ? "block" : "hidden"
                   } font-game text-xs sm:text-xs text-white leading-6`}
                 >
-                  there's not much here yet, but hey the train is moving!
+                  {"there's not much here yet, but hey the train is moving!"}
                 </h1>
               </div>
             </div>
