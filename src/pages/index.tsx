@@ -31,10 +31,10 @@ export default function Home() {
       </Head>
       <div className=" w-screen h-screen flex items-center justify-start bg-primary">
         <div className="w-full flex flex-col gap-5 ">
-          <div className="font-game font-bold text-base px-4">
+          <div className="font-game font-bold text-base px-4 relative">
             Richard Angkasa
           </div>
-          <div className="overflow-clip ">
+          <div className="overflow-clip relative">
             {/* train */}
             <div className="overflow-auto  bg-transparent  absolute w-full ">
               <div className="relative min-w-[90rem]  overflow-hidden z-50 shakeit ">
@@ -234,6 +234,17 @@ export default function Home() {
                   <div className="absolute w-full ">
                     <div className="  grid grid-cols-4 h-40">
                       <div className="col-span-1 flex border-x-[16px] border-y-8  border-r-neutral-700  border-t-neutral-600 border-b-neutral-500 border-l-neutral-500 mx-4">
+                        <div className="w-full items-end justify-end flex h-full">
+                          <div
+                            className={`${
+                              work1 ? "" : "translate-y-80"
+                            }   p-2 border-4 border-black  bg-neutral-100 duration-1000 transition-all `}
+                          >
+                            <h1 className=" fill-black font-game text-black text-xs">
+                              click
+                            </h1>
+                          </div>
+                        </div>
                         {/* <img
                           src={glassLeft.src}
                           alt=""
