@@ -1,76 +1,14 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;700&display=swap');
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
+@font-face {
+  font-family: 'game';
+  src: url('../assets/PressStart2P-Regular.ttf');
 }
 
 * {
@@ -87,12 +25,7 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: white
 }
 
 a {
@@ -104,4 +37,116 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+
+.back1 {
+  background-image: url("../assets/back1.png");
+  /* background-image: url("https://picsum.photos/200/300"); */
+
+  animation: movesToLeft 60s infinite linear;
+  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+
+  /* background-repeat: repeat-x; */
+  /* animation: loop 10s linear infinite; */
+}
+.back2 {
+  background-image: url("../assets/back2.png");
+  /* background-image: url("https://picsum.photos/200/300"); */
+
+  animation: movesToLeft 50s infinite linear;
+  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+
+  /* background-repeat: repeat-x; */
+  /* animation: loop 10s linear infinite; */
+}
+.back3 {
+  background-image: url("../assets/back3.png");
+  /* background-image: url("https://picsum.photos/200/300"); */
+
+  animation: movesToLeft 20s infinite linear;
+  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+
+  /* background-repeat: repeat-x; */
+  /* animation: loop 10s linear infinite; */
+}
+.back4 {
+  background-image: url("../assets/back4.png");
+  /* background-image: url("https://picsum.photos/200/300"); */
+
+  animation: movesToLeft 10s infinite linear;
+  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+
+  /* background-repeat: repeat-x; */
+  /* animation: loop 10s linear infinite; */
+}
+.people1 {
+  background-image: url("../assets/people1.png");
+  animation: movesToLeft 10s infinite linear;
+  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+}
+.people2 {
+  background-image: url("../assets/people2.png");
+  animation: movesToRight 20s infinite linear;
+  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+}
+.people3 {
+  background-image: url("../assets/people3.png");
+  animation: movesToRight 30s infinite linear;
+  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+}
+
+@keyframes movesToLeft {
+  to {
+    background-position: -100% 0% ;
+  }
+}
+
+@keyframes movesToRight {
+  to {
+    background-position: 100% 0% ;
+  }
+}
+
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.ping{
+  animation: ping 4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.shakeit {
+  animation: shake-animation 5s ease infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes shake-animation {
+  0% { transform:translate(0,0) }
+ 2% { transform:translate(-1px, -1px) }
+ 3% { transform:translate(1px, -1px) }
+ 4% { transform:translate(0,0) }
+ 100% { transform:translate(0,0) }
+}
+
+.glassPattern {
+  background-image: url("../assets/glassPattern.svg");
+background-repeat: repeat;
+opacity: 0.3;
 }
