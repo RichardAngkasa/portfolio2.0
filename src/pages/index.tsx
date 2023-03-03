@@ -385,6 +385,12 @@ export default function Home() {
                             >
                               Instagram
                             </a>
+                            <a
+                              target="_blank"
+                              href="https://github.com/RichardAngkasa"
+                            >
+                              Github
+                            </a>
                           </h1>
                         </div>
                       </div>
